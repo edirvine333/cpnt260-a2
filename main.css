@@ -1,0 +1,146 @@
+body {
+  display: grid;  /* turns the <body> element into a grid container */
+  grid-template-columns: 2.5fr 2fr 2fr 1fr;  /* OLD!!! sets up 2 columns with one taking up 3 times as much space as the other */
+  grid-gap: 10px; /* sets a space between the grid items of 10 pixels */
+
+  max-width: 150ch;
+  margin: auto;
+}
+
+nav {
+  grid-column: span 3;
+}
+
+nav ul {
+  display: flex;  /* turns the <ul> element into a flex container so that the navigation menu will go horizontal on desktop displays */
+  flex-wrap: wrap; /* forces the navigation menu vertical for mobile displays */
+  justify-content: center;
+
+  list-style: none;
+  padding-left: 0rem;
+}
+
+nav ul li {
+  flex: 0 0 auto;  /* defaults to grow so that the flex items grow as the viewport grows */
+  min-width: 15rem; /* sets a minimumn width to force the flex items to wrap for mobile displays */
+
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+
+  padding: 0.5rem;
+}
+
+.nav_link {
+  color: black;
+}
+
+a:hover {
+  color: rgb(84, 144, 182);
+}
+
+.login {
+  display: grid;  /* turns the login <div> into a grid container to vertically and horizontally center the Login text using margin: auto; */
+
+  background-color: lightgrey;
+  border: 2px solid black;
+  border-radius: 25px;
+
+  min-width: 100px;
+}
+
+.login p {
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
+
+  margin: auto;  /* since this is a grid item, it respects all margins and margin: auto; centers the element */
+}
+
+.login_link {
+  color: black;
+}
+
+.page_header {
+  display: flex;  /* turns the <header> section into a flex container */
+  flex-wrap: wrap;  /* turns on wrap so that the company name will go below the logo for mobile */
+  justify-content: center;  /* centers the logo on the mobile screen */
+
+  grid-column: span 4;  /* makes the header row span the entire grid horizontally */
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: monospace;
+
+  text-align: center;  /* centers the text when in wraps on mobile */
+  margin: auto;
+}
+
+aside {
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.ram_logo {
+  width: 20vw;  /* makes the logo shrink as the viewport shrinks */
+}
+
+main {
+  display: flex;  /* turn the <main> element into a flex container with the <article> elements as flex items */
+  flex-wrap: wrap;  /*  makes the flex items wrap for vertical alignment on mobile display */
+
+  grid-column: span 3;
+}
+
+article {
+  border: 1px solid black;
+  border-radius: 25px;
+
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 2fr;
+ 
+  min-width: 10rem;  /* sets a minimum width for the flex items to force a wrap for mobile display */
+  flex: 1 0 100px;  /* I have no idea what this is doing - Feb0121 */
+}
+
+.card_header {
+  text-align: center;
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.fas {
+  text-align: center;
+  font-size: 56px;
+  margin: auto; /* because the element is a grid item, margin: auto applies in all directions, centering the icon */
+}
+
+.card_content {
+  font-family: monospace;
+  font-size: 20px;
+  margin: 1rem;
+
+}
+
+footer {
+  display: flex;  /* creates a flex container of the <footer> element so that the footer will go horizontal on desktop displays */
+  justify-content: center;  /* centers the flex items whether they are horizontal or vertical due to wrap */
+  flex-wrap: wrap;  /* wraps the flex items */
+ 
+  grid-column: span 4;  /* makes the footer span two columns and fill the grid horizontally */
+}
+
+footer p {
+  flex: 0 0 auto; /* flex items do not grow or shrink so they stay close together */
+
+  font-family: monospace;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+a {
+  color: rgb(45, 126, 153);
+  text-decoration: none; /* removes the underline from links */
+}
+

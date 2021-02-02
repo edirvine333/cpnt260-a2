@@ -84,15 +84,24 @@ aside {
 
 .ram_logo {
   width: 20vw;  /* makes the logo shrink as the viewport shrinks */
+
+  padding-top: 7.5rem;
 }
 
 main {
-  display: flex;  /* turn the <main> element into a flex container with the <article> elements as flex items */
-  flex-wrap: wrap;  /*  makes the flex items wrap for vertical alignment on mobile display */
-
   grid-column: span 3;
+
+  text-align: center;
+  font-family: monospace;
 }
 
+h2 {
+  font-size: 36px;
+}
+section {
+  display: flex;  /* turn the <main> element into a flex container with the <article> elements as flex items */
+  flex-wrap: wrap;  /*  makes the flex items wrap for vertical alignment on mobile display */
+}
 article {
   border: 1px solid black;
   border-radius: 25px;
